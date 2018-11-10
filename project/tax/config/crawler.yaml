@@ -1,0 +1,10 @@
+# coding:utf-8
+
+#讯代理api
+xun_api: 'http://api.xdaili.cn/xdaili-api//greatRecharge/getGreatIp?spiderId=bee3b5cbacef42f89f861130ed898e71&orderno=YZ201810192048oyA1Wm&returnType=2&count=10'
+
+#太阳代理api:
+sun_api: 'http://http.tiqu.qingjuhe.cn/getip?num=10&type=2&pro=&city=0&yys=0&port=1&pack=22871&ts=1&ys=0&cs=0&lb=1&sb=0&pb=45&mr=0&regions='
+
+#一次性取多少条数据从redis里
+max_once: 100

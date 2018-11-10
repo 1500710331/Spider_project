@@ -1,0 +1,309 @@
+2018-11-09 17:39:23 - control_spider.py[line:80] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_list', 'data': {'key': '啊'}, 'proxies': True}
+,信息为:Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 511, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Anaconda3\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to master:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 511, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Anaconda3\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 68, in start
+    ip_pool = get_proxies_from_redis()
+  File "C:\Users\shitian\Desktop\project1\tax\util\ipproxy.py", line 118, in get_proxies_from_redis
+    keys_list = redis_obj.keys()
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 1032, in keys
+    return self.execute_command('KEYS', pattern)
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to master:6379. getaddrinfo failed.
+
+2018-11-09 17:44:45 - control_spider.py[line:80] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_list', 'data': {'key': '啊'}, 'proxies': False}
+,信息为:Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 73, in start
+    result = spider_module.main(**data)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 38, in main
+    for url in s:
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 26, in get_detail
+    s = get_page(**kwargs)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 19, in get_page
+    url = 'http://www.fjcredit.gov.cn/creditsearch.redlist.dhtml?source_id=100&kw={}&page={}'.format(keyword, page)
+NameError: name 'keyword' is not defined
+
+2018-11-10 11:08:10 - control_spider.py[line:80] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_list1', 'data': {'keyword': '大'}, 'proxies': True}
+,信息为:Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 511, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Anaconda3\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to master:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 511, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Anaconda3\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 68, in start
+    ip_pool = get_proxies_from_redis()
+  File "C:\Users\shitian\Desktop\project1\tax\util\ipproxy.py", line 118, in get_proxies_from_redis
+    keys_list = redis_obj.keys()
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 1032, in keys
+    return self.execute_command('KEYS', pattern)
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to master:6379. getaddrinfo failed.
+
+2018-11-10 11:08:31 - control_spider.py[line:80] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_list1', 'data': {'keyword': '大'}, 'proxies': True}
+,信息为:Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 511, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Anaconda3\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to master:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 511, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Anaconda3\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 68, in start
+    ip_pool = get_proxies_from_redis()
+  File "C:\Users\shitian\Desktop\project1\tax\util\ipproxy.py", line 118, in get_proxies_from_redis
+    keys_list = redis_obj.keys()
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 1032, in keys
+    return self.execute_command('KEYS', pattern)
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to master:6379. getaddrinfo failed.
+
+2018-11-10 13:31:36 - control_spider.py[line:81] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_list', 'data': {'keyword': '大'}, 'proxies': False}
+,信息为:Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 74, in start
+    result = spider_module.main(**data)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 43, in main
+    get_page(**kwargs)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 26, in get_page
+    get_detail(**kwargs)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 38, in get_detail
+    hr.cache_list_redis('TB_CREDIT_FJ_URL', all_url)
+NameError: name 'hr' is not defined
+
+2018-11-10 13:34:08 - control_spider.py[line:81] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_list', 'data': {'keyword': '大'}, 'proxies': False}
+,信息为:Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 74, in start
+    result = spider_module.main(**data)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 43, in main
+    get_page(**kwargs)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 26, in get_page
+    get_detail(**kwargs)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 38, in get_detail
+    hr.cache_list_redis('TB_CREDIT_FJ_URL', all_url)
+NameError: name 'hr' is not defined
+
+2018-11-10 14:11:45 - control_spider.py[line:81] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_detail', 'data': {}, 'proxies': False}
+,信息为:Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [WinError 10048] 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10048 connecting to 127.0.0.1:6379. 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [WinError 10048] 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 74, in start
+    result = spider_module.main(**data)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_detail.py", line 60, in main
+    url = hr.get_data_redis("TB_CREDIT_FJ_URL")
+  File "C:\Users\shitian\Desktop\project1\tax\model\handle_redis.py", line 50, in get_data_redis
+    value=self.redispool.spop(k)
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 1646, in spop
+    return self.execute_command('SPOP', name)
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10048 connecting to 127.0.0.1:6379. 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。.
+
+2018-11-10 14:12:06 - control_spider.py[line:81] - error - INFO - 发生异常,参数为:{'module': 'credit_fj_list', 'data': {'keyword': '我'}, 'proxies': False}
+,信息为:Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [WinError 10048] 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10048 connecting to 127.0.0.1:6379. 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [WinError 10048] 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shitian\Desktop\project1\tax\control_spider.py", line 74, in start
+    result = spider_module.main(**data)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 45, in main
+    get_page(**kwargs)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 27, in get_page
+    get_detail(**kwargs)
+  File "C:\Users\shitian\Desktop\project1\tax\credit_fj\credit_fj_list.py", line 40, in get_detail
+    hr.cache_list_redis('TB_CREDIT_FJ_URL', all_url)
+  File "C:\Users\shitian\Desktop\project1\tax\model\handle_redis.py", line 45, in cache_list_redis
+    self.redispool.sadd(k, *datas)
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "C:\Anaconda3\lib\site-packages\redis\client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Anaconda3\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10048 connecting to 127.0.0.1:6379. 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。.
+
